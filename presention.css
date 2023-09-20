@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*Font awesome*/
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/nature-concepte/images/g.jpg');
+    background-size: 100%;
+    background: rgba(100,0,0,.2);
+    /*filter:blur(5px);
+    -webkit-filter:blur(5px);*/
+    height: 100vh;
+}
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.container
+{
+ 	/*max-width:140px;*/
+ 	margin: auto;
+}
+
+.row
+{
+  	display: flex;
+  	flex-wrap: wrap; 
+}
+
+.pres.fixed
+{  
+	position         : fixed;
+	background-color : #fff;
+	border-bottom    : thin solid #eee; 
+	animation        : fixpres 1s ease;
+}
+
+@keyframes fixpres{
+	0%{
+		transform : translateY(-100%);
+	}
+	100%{
+		transform : translateY(-%);
+	}
+}
+
+.pres
+{   
+	position:fixed;
+	background-color:#fff;
+	left: 0; 
+	right: 0;
+	border-bottom: thin solid #fff;
+	padding: 0 15px;
+	z-index: 11;
+}
+
+.pres .row
+{
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.pres .navbar ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 300px;
+}
+
+.pres .navbar ul li 
+{
+	display: inline-block;
+	margin-left: 40px;
+}
+
+
+.pres .navbar ul li a
+{
+   font-size: 15px;
+   text-decoration: none;
+   font-weight: 600;
+   color: #000;
+   line-height: 72px;  
+   position: relative;
+   display: block;
+
+}
+
+.pres .navbar ul li a::before
+{
+	content: '';
+	height:3px;
+	background-color: #febd01;
+	width: 0%;
+	position:  absolute;
+	right: 0 ;
+	bottom: -1px;
+	transition: all .5s ease;
+}   
+
+.pres .navbar ul li a:hover::before,
+.pres .navbar ul li a.active::before
+{
+   width: 100%;
+   left: 0;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  margin-left: 25px;
+}
+
+.dropdown-content a 
+{
+  text-decoration: none;
+  color:#000;
+  margin-bottom:45px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.title
+{
+	padding-top:50px;
+}
+
+.title .row 
+{
+	margin:50px;
+}
+
+.title .titre
+{
+	margin:auto;
+}
+.title .titre h1
+{
+	font-size:35px;
+    font-weight: 450;
+    text-align: center;
+    margin:10px 350px;
+	padding: 15px;
+}
+
+.groups
+{
+	margin:30px;
+	padding:0px;
+}
+
+.groups .row .text
+{
+	margin-left: 280px;
+	margin-bottom: 10px;
+}
+
+.groups .content
+{
+   display: flex; 
+   margin-bottom:100px;
+}
+
+.groups .content .imag
+{
+	margin-left:250px;
+}
+
+.groups .content .texte
+{
+	margin-right: 150px; 
+	margin-top: 30px;  
+}
+
+.groups .content .texte p
+{
+	font-size:14px;
+	background-color: #fff;  
+}
+
+
+.groups .row .text1
+{
+	margin-left: 980px;
+	margin-bottom: 10px;
+}
+
+.groups .content1
+{
+   display: flex; 
+   margin-bottom:100px;
+}
+
+
+.groups .content1 .texte
+{
+	margin-left:240px;
+	margin-top: 30px;   
+}
+
+.groups .content1 .imag
+{
+	margin-right:150px;
+}
+.groups .content1 .texte p
+{
+	font-size:14px;
+	background-color: #fff;  
+}
+
+.foot 
+{
+background-color: #666;
+}
+
+.foot .content 
+{
+	display: flex;
+	flex: 0 0 100%;
+	max-width:100%;
+	padding: 30px;
+}
+
+.foot .content .ft
+{
+	margin-left: 100px;
+	color:#fff;
+}
+
+.foot .content .ft p
+{
+	margin-right:15px;
+}
+
+.foot .content .social 
+{
+	margin-left:100px;
+}
+
+.foot .content .social a
+{
+	font-size: 25px;
+	text-decoration:none;
+	color: white;
+	margin-left:30px;
+}
+
+.foot .bas hr
+{
+	width:1200px;
+	margin-left:60px;
+}
+
+.foot .bas a
+{
+  text-decoration: none;
+  margin:100px 500px;
+  color:#6cc12e;
+  font-size:13px
+}
+

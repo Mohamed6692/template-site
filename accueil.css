@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*Font awesome*/
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+  	margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.container
+{
+ 	/*max-width:140px;*/
+ 	margin: auto;
+}
+
+.row
+{
+  	display: flex;
+  	flex-wrap: wrap; 
+}
+
+.header.fixed
+{
+	position         : fixed;
+	background-color : #fff;
+	border-bottom    : thin solid #eee; 
+	animation        : fixHeader 1s ease;
+}
+
+@keyframes fixHeader{
+	0%{
+		transform : translateY(-100%);
+	}
+	100%{
+		transform : translateY(-%);
+	}
+}
+
+.header
+{
+	position:fixed;
+	left: 0; 
+	right: 0;
+	border-bottom: thin solid #fff;
+	padding: 0 15px;
+	z-index: 11;
+	background-color:#fff;
+}
+
+.header .row
+{
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.header .navbar ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 300px;
+}
+
+.header .navbar ul li 
+{
+	display: inline-block;
+	margin-left: 40px;
+}
+
+
+.header .navbar ul li a
+{
+   font-size: 15px;
+   text-decoration: none;
+   font-weight: 600;
+   color: #000;
+   line-height: 72px;  
+   position: relative;
+   display: block;
+
+}
+
+.header .navbar ul li a::before
+{
+	content: '';
+	height:3px;
+	background-color: #febd01;
+	width: 0%;
+	position:  absolute;
+	right: 0 ;
+	bottom: -1px;
+	transition: all .5s ease;
+}   
+
+.header .navbar ul li a:hover::before,
+.header .navbar ul li a.active::before
+{
+   width: 100%;
+   left: 0;
+}
+
+.Accueil
+{
+	padding: 100px 0px;
+	background-color: #fff;
+}
+
+.Accueil .container 
+{
+	margin: auto;
+	max-width: 100%;
+}
+
+.Accueil .content 
+{
+	display: flex;
+	flex:0 0 100%; 
+	width: 200px;
+}
+
+.Accueil .text-block 
+{
+	flex: 0 0 50%;
+	background: url('/nature-concepte/images/6.jpg');
+	background-size:100%; 
+	max-width: 100%;
+	padding-right:60px;
+	display: block;
+	line-height: 1.7em;
+	position: relative;
+}
+
+/*.Accueil .text-block::after
+{ 
+	content: '';
+	background: url('/nature-concepte/images/f.jpg');
+	opacity: 0.5;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right: 0;
+	z-index: -1;
+}
+*/
+.Accueil .text-block h1
+{ 
+    font-weight:600;
+	margin:250px 45px;
+	padding: 15px;
+}
+
+
+
+.Accueil .block 
+{
+	background: url('/nature-concepte/images/g.jpg');
+	padding-right: 40px;
+	background-size: cover;
+}
+
+.Accueil .block  img
+{	margin-top:125px;
+ 	width: 400px;
+ 	margin-left:145px	
+
+}
+
+.Accueil .block p
+{	
+	font-size:17px;
+    font-weight:200;
+    margin-left: 80px
+}
+
+.prestation
+{
+	background-color:#f5f8fd;
+	margin:55px;
+	padding:0px;	 
+}
+
+.prestation .text-block
+{
+	text-align:center;
+	max-width: 100%;
+	margin-left:350px; 
+}
+
+.prestation .text-block h2,h3
+{
+	max-width: 100%;
+	margin:15px; 
+}
+
+.prestation .content
+{
+	display: flex;
+	flex: 0 0 100%;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+	max-width: 100%;
+    height: auto;
+    margin:0;
+}
+
+ 
+.prestation .content .block-img 
+{
+	background-color: #fff;
+	padding: 30px;
+	flex: 0 0 calc(25% - 20px);
+	max-width: calc(25% - 20px);
+	margin:35px;
+	border:0.7px solid #eee;
+	text-align: center;
+	position: relative;
+	border-radius: 5px;
+	text-decoration: none;
+	flex-wrap: wrap;
+	margin:0;
+	box-shadow: 0.6px 0.6px 8px #888888;
+}
+
+.prestation .content .block-img img
+{	
+    height: 200px;
+	width: 250px;
+	margin:0 auto 30px;
+	text-align:  center;
+    background-color: #febd01;
+    flex-wrap: wrap;
+    line-height: 1.7em;
+}
+
+.prestation .content .block-img img:hover 
+{
+    opacity: 0.3;
+}
+
+.prestation .content .block-img a
+{	
+   display: inline-block;
+   text-decoration: none;
+   color:#000;
+   font-size:18px; 
+   
+}
+
+.prestation .content .liens a
+{ display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #fff;
+  border:2px solid #6cc12e;
+  color:#6cc12e;
+  font-size: 20px;
+  padding: 7px 14px;
+  cursor: pointer;
+  margin: 35px;
+ }
+
+.cmmt 
+{
+	padding:40px 150px;	
+}
+
+.cmmt .content
+{
+	display: flex;
+	flex:0 0 100%; 
+	max-width: 100%;
+}
+
+
+.cmmt .content .text-block
+{
+	flex: 0 80% 80%;
+	max-width: 60%;
+
+}
+
+.cmmt .content .text-block h1
+{  
+	 font-size:26px;
+	 font-weight: 430;
+	 margin-left: 80px;
+}
+
+.cmmt .content .text-block h2
+{  
+	 font-size:26px;
+	 font-weight: 430;
+	 color:#6cc12e;
+	 margin-left:80px; 
+}
+
+
+.cmmt .content .text-block ul
+{	
+  margin-left:90px;
+  margin:20px 70px;
+}
+
+.cmmt .content .text-block li
+{	
+  padding-bottom: 1em;
+}
+.cmmt .content .block img
+ {
+   margin-top: 70px;
+ }
+
+ .ren
+ {
+ 	max-width: 100%;
+ 	min-height: 100vh;
+	background-image: url('/nature-concepte/images/g.jpg');
+	background-size:cover;
+	background-attachment:fixed; 
+	background-position:center;
+	padding: 15px;	
+ }
+
+ .ren .content
+ {
+	flex: 0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 65px;
+ }
+
+
+
+ .ren .content .title 
+ { width:600%;
+   background-color:white;
+   flex: 0 0 80%;
+   max-width: 80%;
+   margin-left:138px;
+   margin-bottom: 20px;
+   text-align:center;
+ }
+
+ .ren .content .title h1
+ {
+    font-size: 35px;
+    font-weight: 350;
+    text-align: center;
+ }
+
+ .ren .content .title p
+ {
+    font-size:25px;
+    font-weight:350;
+    color:#6cc12e;
+    text-align: center;
+ }
+
+ .ren .content .info
+ {
+    display: flex;
+	flex: 0 0 100%;
+	max-width: 100%;
+	background-color: white;
+	flex: 0 0 80%;
+    max-width: 80%;
+    margin-left:138px;
+ }
+
+  .ren .content .info .block
+  {
+  	max-width: 100%;
+    padding: 30px;
+  }
+
+.ren .content .info .block img
+  {
+  	 height: 250px;
+	 width: 197px;
+  }
+
+  .ren .content .info .text-block em
+{
+	 padding-left: 160px;
+}
+
+.foot
+{
+	background-color:#666;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.foot .content
+{
+	display: flex;
+    flex:0 0 100%; 
+    max-width: 100%;
+    padding: 30px;
+}
+
+.foot .content .ft
+{
+	margin-left:100px;
+	color: #fff;
+}
+
+.foot .content .fte
+{
+	margin-left:100px;
+	color: #fff;
+}
+
+.foot .content .fter
+{
+	margin-left:100px;
+	color: #fff;
+}
+
+.foot .content .social 
+{
+	margin-left:100px;
+}
+
+.foot .content .social a
+{
+	font-size: 25px;
+	text-decoration:none;
+	color: white;
+	margin-left:30px;
+}
+
+.foot .bas hr
+{
+	width:1200px;
+	margin-left: 60px;
+}
+
+.foot .bas a
+{
+  text-decoration: none;
+  margin:100px 500px;
+  color:#6cc12e;
+  font-size:13px
+}

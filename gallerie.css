@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*Font awesome*/
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.container
+{
+ 	/*max-width:140px;*/
+ 	margin: auto;
+}
+
+.row
+{
+  	display: flex;
+  	flex-wrap: wrap; 
+}
+
+.gallerie .fixed
+{  
+	position         : fixed;
+	background-color : #fff;
+	border-bottom    : thin solid #eee; 
+	animation        : fixGallerie 1s ease;
+}
+
+@keyframes fixGallerie{
+	0%{
+		transform : translateY(-100%);
+	}
+	100%{
+		transform : translateY(-%);
+	}
+}
+
+.gallerie
+{   
+	position:fixed;
+	background-color:#fff;
+	left: 0; 
+	right: 0;
+	border-bottom: thin solid #fff;
+	padding: 0 15px;
+	z-index: 11;
+}
+
+.gallerie .row
+{
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.gallerie .navbar ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 300px;
+}
+
+.gallerie .navbar ul li 
+{
+	display: inline-block;
+	margin-left: 40px;
+}
+
+
+.gallerie .navbar ul li a
+{
+   font-size: 15px;
+   text-decoration: none;
+   font-weight: 600;
+   color: #000;
+   line-height: 72px;  
+   position: relative;
+   display: block;
+
+}
+
+.gallerie .navbar ul li a::before
+{
+	content: '';
+	height:3px;
+	background-color: #febd01;
+	width: 0%;
+	position:  absolute;
+	right: 0 ;
+	bottom: -1px;
+	transition: all .5s ease;
+}   
+
+.gallerie .navbar ul li a:hover::before,
+.gallerie .navbar ul li a.active::before
+{
+   width: 100%;
+   left: 0;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  margin-left: 25px;
+}
+
+.dropdown-content a 
+{
+  text-decoration: none;
+  color:#000;
+  margin-bottom:45px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.photos 
+{
+	padding-top:105px;
+	background-color:white;
+}
+
+.photos .content 
+{
+	margin-left: 370px;
+	word-spacing:16px;
+}
+
+.photos .content button
+{
+	text-decoration: none;
+	border:1px solid #A0A0A0;
+	border-radius:4px;
+	padding-top: 7px;
+	padding-right:9px;
+	padding-left: 10px;
+	color: #999;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.photos .content button::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+height: 60%;
+z-index: -1;
+-webkit-transform: scaleY(.1);
+transform: scaleY(.1);
+transition: all .4s
+}
+.photos .content button :hover{
+color:#6cc12e;
+}
+
+
+.images
+{
+	background-color:#fff;
+	max-width: 100%;
+	margin-top: 20px; 
+}
+
+.images .content
+{
+	margin:auto;
+	display: block;
+}
+
+.images .content .gallery {
+  margin: 5px;
+  float: left;
+  width: 280px;
+}
+
+.images .gallery:hover {
+  border: 1px solid #777;
+  opacity:0.3;
+}
+
+.images .gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+.foot 
+{
+background-color: #666;
+}
+
+.foot .content 
+{
+	display: flex;
+	flex: 0 0 100%;
+	max-width:100%;
+	padding: 30px;
+}
+
+.foot .content .ft
+{
+	margin-left: 100px;
+	color:#fff;
+}
+
+.foot .content .ft p
+{
+	margin-right:15px;
+}
+
+
+.foot .content .social 
+{
+	margin-left:100px;
+}
+
+.foot .content .social a
+{
+	font-size: 25px;
+	text-decoration:none;
+	color: white;
+	margin-left:30px;
+}
+
+.foot .bas hr
+{
+	width:1200px;
+	margin-left:60px;
+}
+
+.foot .bas a
+{
+  text-decoration: none;
+  margin:100px 500px;
+  color:#6cc12e;
+  font-size:13px
+}
+
+
+.imag .row 
+{
+  margin-left:70px;
+  margin-right:70px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding:2px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width:25%;
+  display: none; /* Hide columns by default */
+
+}
+
+.imag .row .column :hover 
+{
+    opacity:0.7;
+}
+
+.imag .row img
+{
+    height:330px;
+	width:300px;
+}
+
+/* Clear floats after rows */
+.imag .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+
+#myBtnContainer 
+{
+	margin-left: 500px;
+	background-color:white;
+	margin-bottom: 35px;
+	word-spacing:30px;
+}
+
+.btn 
+{
+  border: none;
+  outline: none;
+  margin-top:100px;
+  border:1px solid #A0A0A0; 
+  border-radius:7px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color:#ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn .active {
+  background-color:#666;
+  color: white;
+}
+
+
+
+
+
+
